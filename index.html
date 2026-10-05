@@ -28,12 +28,13 @@ label{font-size:13px;font-weight:600;display:block;margin:12px 0 4px}
 .sec{display:none}.sec.on{display:block}
 .chk{display:flex;gap:8px;align-items:flex-start;margin:6px 0;font-size:14px}
 button.t{float:right;border:1px solid var(--line);background:var(--card);color:var(--tx);border-radius:8px;padding:4px 10px;cursor:pointer}
+.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;margin-top:10px}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 </style></head><body><div class="w">
 <button class="t" onclick="var d=document.documentElement;d.dataset.theme=d.dataset.theme=='dark'?'light':'dark'">🌓</button>
 <h1>🚀 Meu Painel de Evolução</h1>
 <p class="s">Vick · SDR 1 · recorte Jun–Out/2026 </p>
 <div class="tabs" id="tabs"></div>
-
 <div class="sec on" id="s0">
 <div class="g">
 <div class="c k"><b>60</b><span>reuniões agendadas (jun–out)</span></div>
@@ -54,7 +55,6 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="box">2. <b>Qualidade do agendamento:</b> decisor + briefing + confirmação.</div>
 <div class="box">3. <b>Conversa de valor:</b> investigar e contornar objeções, não só convidar.</div></div>
 </div></div>
-
 <div class="sec" id="s1"><div class="two">
 <div class="c"><h2>Funil de setembro (142 escolas)</h2><div id="f"></div></div>
 <div class="c"><h2>Profundidade de cadência</h2><div id="cd"></div>
@@ -66,7 +66,6 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="box">Em St. Patrick, a resposta "pode mandar" ficou sem dia e hora. Teste: "Terça 14h ou quarta 15h?"</div>
 <div class="box">Em CE Viver, foram meses só no WhatsApp. Teste: ligar para a secretaria e variar o gancho.</div></div>
 </div></div>
-
 <div class="sec" id="s2"><div class="two">
 <div class="c"><h2>Desfecho das 60 reuniões</h2><div id="ds"></div></div>
 <div class="c"><h2>Evolução mensal</h2><div id="mn"></div></div>
@@ -76,7 +75,6 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="box ok">Tarde: 12,9% · Manhã: 31%. Priorize 14h–16h30.</div>
 <div class="box">Capital: 88% de presença · Interior: 74%. No interior, confirmar 24h e 2h antes.</div></div>
 </div></div>
-
 <div class="sec" id="s2b">
 <div class="g">
 <div class="c k warn"><b>58%</b><span>das reuniões criadas nos dias 21–31 (35 de 60)</span></div>
@@ -109,7 +107,6 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="chk"><input type="checkbox"> <b>Dia 1:</b> começar o primeiro dia útil do mês já com bloco de prospecção e mensagens de rota.</div>
 <div class="chk"><input type="checkbox"> <b>Reaquecimento:</b> reunião com mais de 3 dias de antecedência ou no mês seguinte recebe WhatsApp em D-1 e ligação curta 2h antes.</div></div>
 </div>
-
 <div class="sec" id="s3">
 <div class="c"><h2>🧾 Rastro de trabalho: o que o CRM conta sobre o meu dia</h2>
 <p class="s" style="margin-top:0">Para ser Pleno, seu trabalho precisa ser visível e comprovável por qualquer pessoa que abra o registro. Estes números são o ponto de partida, e a meta é melhorar mês a mês.</p></div>
@@ -134,11 +131,22 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="chk"><input type="checkbox"> Todo agendamento com ficha: decisor, dor, concorrente, vigência.</div>
 <div class="chk"><input type="checkbox"> Todo no-show com motivo e tarefa de reagendar em 48h.</div></div>
 </div></div>
-
-<div class="sec" id="s4"><div class="c"><h2>✍️ Meu plano (preencho e levamos para a mentoria)</h2>
+<div class="sec" id="s4">
+<div class="c"><h2>✍️ Meu plano (preencho e levamos para a mentoria)</h2>
 <p class="s" style="margin-top:0">Fica salvo neste navegador.</p>
-<div id="pl"></div></div></div>
+<div id="pl"></div></div>
 
+<div class="c" style="margin-top:16px">
+<h2>🎬 Inspiração para o seu desenvolvimento</h2>
+<p class="s" style="margin-top:0">Para refletir sobre como alternar entre a "Zona de Aprendizado" e a "Zona de Desempenho":</p>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/YKACzIrog24" title="How to get better at the things you care about | Eduardo Briceño" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p style="font-size:13px;margin:12px 0 0">
+👉 <a href="https://www.youtube.com/watch?v=YKACzIrog24" target="_blank" rel="noopener" style="color:var(--pri);font-weight:600;text-decoration:none">Assistir "How to get better at the things you care about", de Eduardo Briceño (TED) no YouTube</a>
+</p>
+</div>
+</div>
 </div>
 <script>
 const $=id=>document.getElementById(id);
@@ -161,7 +169,14 @@ stk('pc',[["Dias 1–10",1,1,1],["Dias 11–20",17,5,0],["Dias 21–31",26,7,2]]
 stk('pr',[["Dias 1–10",6,7,3],["Dias 11–20",10,3,0],["Dias 21–31",28,3,0]]);
 bars('pm',[["Jun · 21–31",8],["Jul · 21–31",12],["Ago · 21–31",6],["Set · 21–31",7],["Jun · 11–20",5],["Jul · 11–20",5],["Ago · 11–20",7],["Set · 11–20",5]]);
 bars('pl2',[["Dias 1–10",1.3,'var(--warn)',v=>v+'d'],["Dias 11–20",6.3,'var(--bad)',v=>v+'d'],["Dias 21–31",3.9,'var(--ok)',v=>v+'d']]);
-const q=["Ritmo do mês: o que me impede de agendar mais nos primeiros 10 dias, e o que eu testo no próximo mês?","Lead time: o que vou fazer para reduzir os agendamentos com 4+ dias de antecedência?","Higiene do CRM: qual será meu rito de registro diário?","Qual objeção de concorrente eu quero dominar primeiro, e como vou contorná-la?","Como vou garantir que o decisor esteja confirmado antes de enviar o convite?","Qual foi meu melhor mês (agosto?) e o que eu fiz diferente?","Onde eu quero estar no fim do ano?"];
+
+const q=[
+  "Ritmo do mês: o que me impede de agendar mais nos primeiros 10 dias, e qual ação prática vou testar para distribuir a meta desde a Semana 1?",
+  "Janela de agendamento: o que vou fazer para priorizar agendamentos de 2 a 3 dias e reaquecer ativamente os marcados com 4+ dias de antecedência?",
+  "Janela de prospecção: como vou reorganizar meu dia para concentrar minhas ligações de prospecção no período da manhã (9h–11h30)?",
+  "Higiene do CRM: qual será meu rito diário para registrar descrições das atividades na hora e eliminar atualizações em lote?"
+];
+
 let st={};try{st=JSON.parse(localStorage.getItem('vick')||'{}')}catch(e){}
 $('pl').innerHTML=q.map((t,i)=>`<label>${t}</label><textarea data-i="${i}">${st[i]||''}</textarea>`).join('');
 document.querySelectorAll('textarea').forEach(t=>t.oninput=()=>{st[t.dataset.i]=t.value;try{localStorage.setItem('vick',JSON.stringify(st))}catch(e){}});
