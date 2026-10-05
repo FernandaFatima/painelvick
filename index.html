@@ -39,7 +39,7 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="c k"><b>60</b><span>reuniões agendadas (jun–out)</span></div>
 <div class="c k ok"><b>44</b><span>visitas concluídas (73%)</span></div>
 <div class="c k"><b>17.431</b><span>alunos potenciais gerados</span></div>
-<div class="c k ok"><b>78%</b><span>escolas com 4+ toques</span></div>
+<div class="c k ok"><b>78%</b><span>escolas com +4 atividades</span></div>
 <div class="c k warn"><b>21,7%</b><span>cancelamento / no-show</span></div>
 <div class="c k warn"><b>1,4%</b><span>conversão da base de set.</span></div>
 </div>
@@ -50,7 +50,7 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="box ok">100% de comparecimento em escolas grandes (&gt;400 alunos).</div>
 <div class="box ok">Tom cordial e humano, que abre portas.</div></div>
 <div class="c"><h2>🎯 3 alavancas para o Pleno</h2>
-<div class="box">1. <b>Rastro de trabalho:</b> todo toque conta uma história no CRM.</div>
+<div class="box">1. <b>Rastro de trabalho:</b> toda atividade conta uma história no CRM.</div>
 <div class="box">2. <b>Qualidade do agendamento:</b> decisor + briefing + confirmação.</div>
 <div class="box">3. <b>Conversa de valor:</b> investigar e contornar objeções, não só convidar.</div></div>
 </div></div>
@@ -58,9 +58,9 @@ button.t{float:right;border:1px solid var(--line);background:var(--card);color:v
 <div class="sec" id="s1"><div class="two">
 <div class="c"><h2>Funil de setembro (142 escolas)</h2><div id="f"></div></div>
 <div class="c"><h2>Profundidade de cadência</h2><div id="cd"></div>
-<h2 style="margin-top:18px">Toques por semana</h2><div id="wk"></div></div>
-<div class="c"><h2>Toques por horário</h2><div id="hr"></div>
-<div class="box warn">Cerca de metade dos toques acontece depois das 16h. A manhã (9h–11h30) é a melhor janela para falar com diretores.</div></div>
+<h2 style="margin-top:18px">Atividades por semana</h2><div id="wk"></div></div>
+<div class="c"><h2>Atividades por horário</h2><div id="hr"></div>
+<div class="box warn">Cerca de metade das atividades acontece depois das 16h. A manhã (9h–11h30) é a melhor janela para falar com diretores.</div></div>
 <div class="c"><h2>Onde estão as oportunidades</h2>
 <div class="box">Com contrato longo (ex.: Bernoulli até 2029) a conversa terminou rápido. Teste: "O que funciona bem hoje e o que você mudaria?"</div>
 <div class="box">Em St. Patrick, a resposta "pode mandar" ficou sem dia e hora. Teste: "Terça 14h ou quarta 15h?"</div>
@@ -148,7 +148,7 @@ function go(i){document.querySelectorAll('.sec').forEach((s,j)=>s.classList.togg
 go(0);
 function bars(id,rows,col,fmt){const m=Math.max(...rows.map(r=>r[1]));$(id).innerHTML=rows.map(r=>`<div class="r"><span>${r[0]}</span><div class="bar"><i style="width:${r[1]/m*100}%;background:${r[2]||col||'var(--pri)'}"></i></div><b>${fmt?fmt(r[1]):r[1]}</b></div>`).join('')}
 bars('f',[["Base trabalhada",142],["Sem retorno",110],["Resposta humana",32],["Conversa qualificada",11],["Interesse",5],["Reunião agendada",2]]);
-bars('cd',[["1 toque",8,'var(--bad)'],["2–3 toques",23,'var(--warn)'],["4–5 toques",48],["6+ toques",63,'var(--ok)']]);
+bars('cd',[["1 atividade",8,'var(--bad)'],["2–3 atividades",23,'var(--warn)'],["4–5 atividades",48],["6+ atividades",63,'var(--ok)']]);
 bars('wk',[["Semana 1",190],["Semana 2",103],["Semana 3",140],["Semana 4",71],["Semana 5",78]]);
 bars('hr',[["08h",6],["09h",24],["10h",38],["11h",142],["12h",14],["14h",31],["15h",86],["16h",165],["17h",178],["18h",5]]);
 bars('ds',[["Perdido",38,'var(--mut)'],["Ganho",1,'var(--ok)'],["Pipeline ativo",5,'var(--ok)'],["Cancel./no-show",13,'var(--bad)'],["Em aberto",3,'var(--warn)']]);
